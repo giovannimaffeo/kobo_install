@@ -4,7 +4,7 @@ version: '3'
 services:
   kobocat:
   ${USE_KC_DEV_MODE}  build: ${KC_PATH}
-  ${USE_KC_DEV_MODE}  image: kobocat:dev.${KC_DEV_BUILD_ID}
+  ${USE_KC_DEV_MODE}  image: kobocat:dev.${KC_DEV_BUILD_ID} # alterar para arm
   ${USE_KC_DEV_MODE}  volumes:
   ${USE_KC_DEV_MODE}    - ${KC_PATH}:/srv/src/kobocat
     environment:
@@ -34,7 +34,7 @@ services:
 
   kpi:
   ${USE_KPI_DEV_MODE}  build: ${KPI_PATH}
-  ${USE_KPI_DEV_MODE}  image: kpi:dev.${KPI_DEV_BUILD_ID}
+  ${USE_KPI_DEV_MODE}  image: ./kobocat # alterar para arm
   ${USE_KPI_DEV_MODE}  volumes:
   ${USE_KPI_DEV_MODE}    - ${KPI_PATH}:/srv/src/kpi
     environment:

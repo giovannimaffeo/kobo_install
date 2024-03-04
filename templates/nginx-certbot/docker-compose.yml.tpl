@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nginx_ssl_proxy:
-    image: nginx:1.21-alpine
+    image: arm64v8/nginx:arm-1.21-alpine
     restart: unless-stopped
     volumes:
       - ./data/nginx:/etc/nginx/conf.d
